@@ -2,6 +2,9 @@
   "name": "reac-redux-router-app",
   "version": "1.0.0",
   "description": "reac-redux-router-app by Pluralslight",
+  "scripts": {
+    "start": "babel-node tools/srcServer.js"
+  },
   "author": "Roman Boboshko",
   "license": "MIT",
   "dependencies": {
