@@ -1,6 +1,10 @@
 import webpack from 'webpack';
 import path from 'path';
 
+let Dashboard = require('webpack-dashboard');
+let DashboardPlugin = require('webpack-dashboard/plugin');
+let dashboard = new Dashboard();
+
 export default {
     debug: true,
     devtool: 'cheap-module-eval-source-map',
@@ -21,7 +25,8 @@ export default {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
+        new webpack.NoErrorsPlugin(),
+        new DashboardPlugin(dashboard.setData)
     ],
     module: {
         loaders: [
