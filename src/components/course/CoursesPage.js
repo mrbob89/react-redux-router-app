@@ -31,6 +31,7 @@ class CoursesPage extends Component {
   }
 
   render() {
+    debugger;
     return (
       <div>
         <h1>Courses</h1>
@@ -54,7 +55,8 @@ CoursesPage.propTypes = {
   courses: PropTypes.array.isRequired
 };
 
-function mapStateToProps(state) {
+function mapStateToProps(state, ownProps) {
+  debugger;
   return {
     courses: state.courses
   };
