@@ -1,9 +1,9 @@
 import webpack from 'webpack';
 import path from 'path';
 
-let Dashboard = require('webpack-dashboard');
-let DashboardPlugin = require('webpack-dashboard/plugin');
-let dashboard = new Dashboard();
+// let Dashboard = require('webpack-dashboard');
+// let DashboardPlugin = require('webpack-dashboard/plugin');
+// let dashboard = new Dashboard();
 
 export default {
     debug: true,
@@ -26,7 +26,7 @@ export default {
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
-        new DashboardPlugin(dashboard.setData)
+        //new DashboardPlugin(dashboard.setData)
     ],
     module: {
         loaders: [
