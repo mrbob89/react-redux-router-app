@@ -24,10 +24,17 @@ class CoursesPage extends Component {
     this.props.dispatch(courseActions.createCourse(this.state.course));
   }
 
+  courseRow(course, index) {
+    return <div key={index}>
+      {course.title}
+    </div>
+  }
+
   render() {
     return (
       <div>
         <h1>Courses</h1>
+        {this.props.courses.map(this.courseRow)}
         <h2>Add course</h2>
         <input
           type="text"
@@ -41,6 +48,11 @@ class CoursesPage extends Component {
     );
   }
 }
+
+CoursesPage.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  courses: PropTypes.array.isRequired
+};
 
 function mapStateToProps(state) {
   return {
