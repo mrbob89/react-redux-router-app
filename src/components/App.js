@@ -22,7 +22,7 @@ App.prototypes = {
 
 function mapStateToProps(state, ownProps) {
   return {
-    loading: state.ajaxCallsInProgress > 0
+    loading: state.numAjaxCallsInProgress > 0
   };
 }
 
