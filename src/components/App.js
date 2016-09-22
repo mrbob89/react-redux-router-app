@@ -15,7 +15,7 @@ class App extends Component {
   }
 }
 
-App.prototypes = {
+App.propTypes = {
   children: PropTypes.object.isRequired,
   loading: PropTypes.bool.isRequired
 };

@@ -18,11 +18,11 @@ export function loadCourses() {
   return function(dispatch) {
     dispatch(beginAjaxCall());
     return courseApi.getAllCourses().then(courses => {
-      dispatch(loadCoursesSuccess(courses))
+      dispatch(loadCoursesSuccess(courses));
     }).catch(error => {
       throw(error);
     });
-  }
+  };
 }
 
 export function saveCourse(course) {
